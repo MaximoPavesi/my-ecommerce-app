@@ -1,20 +1,34 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator } from 'react-native';
+import CategoriesScreen from './src/screens/CategoriesScreen'
+import ProductsByCategoryScreen from './src/screens/ProductsByCategoryScreen'
+import { useFonts } from 'expo-font'
+import { useState } from 'react';
 
 export default function App() {
+  const [categorySelected, setCategorySelected] = useState('')
+
+  console.log("Categoría seleccionada: ", categorySelected)
+
+  const [fontLoaded] = useFonts({
+    'Karla-regular': require('./assets/fonts/Karla-Regular.ttf'),
+    'Karla-Bold': require('./assets/fonts/Karla-Bold.ttf'),
+  })
+
+  if (!fontLoaded) return <ActivityIndicator />
+
+  const onSelectCategory = (category) => {
+    setCategorySelected(category)
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>{
+      categorySelected
+        ?
+        <ProductsByCategoryScreen category={categorySelected} />
+        :
+        <CategoriesScreen onSelectCategoryEvent={onSelectCategory} />
+    }
+    </>
+
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
