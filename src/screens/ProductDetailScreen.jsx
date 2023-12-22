@@ -27,31 +27,30 @@ const ProductDetailScreen = ({route}) => {
 
     return(
         <>
-        {
-        isLoading
-        ?
-        <ActivityIndicator />
-        :
-        <>
-        {/* <Header title="Detalle del producto"/> */}
-            <ScrollView >
-              <Image
-                source={{ uri: productSelected.images[0] }}
-                resizeMode='cover'
-                style={isPortrait ? styles.imageProduct : styles.imageProductLandscape}
-              />
-              <View style={styles.detailContainer}>
-                <Text style={styles.title}>{productSelected.title}</Text>
-                <Text style={styles.description}>{productSelected.description}</Text>
-                <Text style={styles.price}>$ {productSelected.price}</Text>
-                <TouchableOpacity style={isPortrait ? styles.buyButton : styles.buyAlt} onPress={() => null}>
-                  <Text style={styles.buyText}>Comprar</Text>
-                </TouchableOpacity>
-              </View>
-            </ScrollView>
+          {
+            isLoading
+            ?
+            <ActivityIndicator />
+            :
+            <>
+              {/* <Header title="Detalle del producto"/> */}
+                <ScrollView >
+                  <Image
+                    source={{ uri: productSelected.images[0] }}
+                    resizeMode='cover'
+                    style={isPortrait ? styles.imageProduct : styles.imageProductLandscape}
+                  />
+                  <View style={styles.detailContainer}>
+                    <Text style={styles.title}>{productSelected.title}</Text>
+                    <Text style={styles.description}>{productSelected.description}</Text>
+                    <Text style={styles.price}>$ {productSelected.price}</Text>
+                    <TouchableOpacity style={isPortrait ? styles.buyButton : styles.buyAlt} onPress={() => null}>
+                      <Text style={styles.buyText}>Comprar</Text>
+                    </TouchableOpacity>
+                  </View>
+                </ScrollView>
             </>
-        }
-        
+          } 
         </>
     )
 }
