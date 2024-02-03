@@ -39,5 +39,3 @@ const ShopNavigator = () => {
 
 export default ShopNavigator
 
-
-
