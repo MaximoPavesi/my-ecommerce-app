@@ -1,6 +1,6 @@
 import { FlatList, Modal, StyleSheet, View, Text, Pressable } from 'react-native'
 import OrderItem from '../components/OrderItem'
-import { useGetOrdersQuery } from '../services/shopService'
+import { useGetOrdersQuery } from '../service/shopService'
 import {useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 

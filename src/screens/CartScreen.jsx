@@ -2,7 +2,7 @@ import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native
 import CartItem from '../components/CartItem'
 import { colors } from '../global/colors'
 import { useSelector } from 'react-redux';
-import { usePostOrderMutation } from '../services/shopService';
+import { usePostOrderMutation } from '../service/shopService';
 
 const CartScreen = ({navigation}) => {
 

@@ -2,10 +2,10 @@ import { NavigationContainer } from "@react-navigation/native";
 import TabNavigator from "./TabNavigator";
 import AuthNavigator from "./AuthNavigator";
 import { useSelector, useDispatch } from "react-redux";
-import { useGetProfilePictureQuery } from "../services/shopService";
+import { useGetProfilePictureQuery } from "../service/shopService";
 import { useEffect } from "react";
 import { setProfilePicture, setUser, setUserLocation } from "../features/authSlice";
-import { useGetUserLocationQuery } from "../services/shopService";
+import { useGetUserLocationQuery } from "../service/shopService";
 import { fetchSession } from "../db";
 
 const MainNavigator = () => {

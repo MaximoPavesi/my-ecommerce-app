@@ -5,7 +5,7 @@ import { useState } from 'react';
 import * as ImagePicker from 'expo-image-picker';
 import { useDispatch, useSelector } from 'react-redux';
 import { setProfilePicture } from '../features/authSlice';
-import { usePutProfilePictureMutation } from '../services/shopService';
+import { usePutProfilePictureMutation } from '../service/shopService';
 
 const ImageSelectorScreen = ({navigation}) => {
   const [image, setImage] = useState('')

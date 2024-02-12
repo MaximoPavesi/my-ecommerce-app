@@ -1,6 +1,6 @@
 import {StyleSheet, FlatList} from 'react-native'
 import CategoryItem from '../components/CategoryItem'
-import { useGetCategoriesQuery } from '../services/shopService'
+import { useGetCategoriesQuery } from '../service/shopService'
 import CustomError from '../components/CustomError'
 
 const CategoriesScreen = ({navigation}) => {

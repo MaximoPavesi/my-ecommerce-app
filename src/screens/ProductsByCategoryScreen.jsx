@@ -5,7 +5,7 @@ import ProductItem from '../components/ProductItem'
 import { useState, useEffect } from 'react'
 import Search from '../components/Search'
 import { useSelector, useDispatch } from 'react-redux'
-import { useGetProductsByCategoryQuery } from '../services/shopService'
+import { useGetProductsByCategoryQuery } from '../service/shopService'
 
 const ProductsByCategoryScreen = ({navigation, route}) => {
 

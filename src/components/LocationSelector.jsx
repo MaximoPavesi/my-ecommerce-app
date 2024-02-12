@@ -5,7 +5,7 @@ import MapPreview from './MapPreview'
 import { maps_api_key } from '../apis/googleCloud'
 import { setUserLocation } from '../features/authSlice'
 import { useDispatch, useSelector } from 'react-redux'
-import { usePutUserLocationMutation } from '../services/shopService'
+import { usePutUserLocationMutation } from '../service/shopService'
 import { colors } from '../global/colors'
 import { getDistance } from 'geolib'
 

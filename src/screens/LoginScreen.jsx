@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import Input from '../components/Input'
 import { colors } from '../global/colors'
-import { useLogInMutation } from '../services/authService'
+import { useLogInMutation } from '../service/authService'
 import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { setUser } from '../features/authSlice'
